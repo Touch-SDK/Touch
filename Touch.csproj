@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE7D696A-6312-409A-8944-1B7D19B7289C}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Touch</RootNamespace>
+    <AssemblyName>Touch</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Profile24</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Touch.XML</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Data\MultipartParser.cs" />
+    <Compile Include="Domain\DocumentUtil.cs" />
+    <Compile Include="Domain\EntityUtil.cs" />
+    <Compile Include="Domain\EnumUtil.cs" />
+    <Compile Include="Domain\StoreExtensions.cs" />
+    <Compile Include="Helpers\DataContractHelper.cs" />
+    <Compile Include="Helpers\EventArgExtension.cs" />
+    <Compile Include="Helpers\TypeExtension.cs" />
+    <Compile Include="Notification\IBroadcasterProvider.cs" />
+    <Compile Include="Notification\INotificationDispatcher.cs" />
+    <Compile Include="Persistence\AbstractCache.cs" />
+    <Compile Include="Persistence\AbstractCacheProvider.cs" />
+    <Compile Include="Persistence\BusinessEntity.cs" />
+    <Compile Include="Persistence\AbstractStore.cs" />
+    <Compile Include="Persistence\IBlob.cs" />
+    <Compile Include="Persistence\IContextProvider.cs" />
+    <Compile Include="Persistence\IContext.cs" />
+    <Compile Include="Persistence\IStoreProvider.cs" />
+    <Compile Include="Persistence\IStore.cs" />
+    <Compile Include="Persistence\Document.cs" />
+    <Compile Include="Persistence\IDocument.cs" />
+    <Compile Include="Persistence\IBusinessEntity.cs" />
+    <Compile Include="Persistence\ITransaction.cs" />
+    <Compile Include="Queue\IQueueProvider.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\ILoggerProvider.cs" />
+    <Compile Include="Logging\MockLogger.cs" />
+    <Compile Include="Logging\MockLoggerProvider.cs" />
+    <Compile Include="Notification\AbstractNotification.cs" />
+    <Compile Include="Notification\INotification.cs" />
+    <Compile Include="Notification\INotificationBroadcaster.cs" />
+    <Compile Include="Persistence\AbstractRepository.cs" />
+    <Compile Include="Persistence\Entity.cs" />
+    <Compile Include="Persistence\PersistenceException.cs" />
+    <Compile Include="Persistence\IEntity.cs" />
+    <Compile Include="Persistence\IPersistence.cs" />
+    <Compile Include="Persistence\IPersistenceProvider.cs" />
+    <Compile Include="Persistence\IRepository.cs" />
+    <Compile Include="Persistence\IRepositoryProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queue\AbstractMessage.cs" />
+    <Compile Include="Queue\IMessage.cs" />
+    <Compile Include="Queue\IMessageQueue.cs" />
+    <Compile Include="Queue\IQueueItem.cs" />
+    <Compile Include="Queue\IQueueWatcher.cs" />
+    <Compile Include="Queue\QueueSettings.cs" />
+    <Compile Include="Queue\QueueUtil.cs" />
+    <Compile Include="Serialization\IEncoder.cs" />
+    <Compile Include="Serialization\ISerializer.cs" />
+    <Compile Include="Serialization\MockEncoder.cs" />
+    <Compile Include="ServiceModel\IUnitOfWork.cs" />
+    <Compile Include="Storage\IArchiver.cs" />
+    <Compile Include="Storage\IStorage.cs" />
+    <Compile Include="Storage\ITemporaryDirectory.cs" />
+    <Compile Include="Storage\ITemporaryFile.cs" />
+    <Compile Include="Storage\ITemporaryStorage.cs" />
+    <Compile Include="Storage\Metadata.cs" />
+    <Compile Include="Storage\StorageSettings.cs" />
+    <Compile Include="Helpers\UrlHelper.cs" />
+    <Compile Include="Helpers\GuidHelper.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
