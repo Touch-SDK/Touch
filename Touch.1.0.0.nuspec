@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Touch</id>
+        <version>1.0.0</version>
+        <authors>Artem Abashev</authors>
+        <projectUrl>https://github.com/Touch-SDK/Touch</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Touch SDK common files.</description>
+    </metadata>
+    <files>
+        <file src="bin\Release\Touch.dll" target="lib\Touch.dll" />
+        <file src="bin\Release\Touch.pdb" target="lib\Touch.pdb" />
+        <file src="bin\Release\Touch.XML" target="lib\Touch.XML" />
+    </files>
+</package>
