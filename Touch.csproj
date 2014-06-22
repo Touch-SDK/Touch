@@ -45,6 +45,8 @@
     <Compile Include="Helpers\DataContractHelper.cs" />
     <Compile Include="Helpers\EventArgExtension.cs" />
     <Compile Include="Helpers\TypeExtension.cs" />
+    <Compile Include="Logic\BusinessLogic.cs" />
+    <Compile Include="Model\Model.cs" />
     <Compile Include="Notification\IBroadcasterProvider.cs" />
     <Compile Include="Notification\INotificationDispatcher.cs" />
     <Compile Include="Persistence\AbstractCache.cs" />
@@ -85,6 +87,8 @@
     <Compile Include="Queue\QueueSettings.cs" />
     <Compile Include="Queue\QueueUtil.cs" />
     <Compile Include="Serialization\IEncoder.cs" />
+    <Compile Include="Serialization\IEncrypter.cs" />
+    <Compile Include="Serialization\IHashGenerator.cs" />
     <Compile Include="Serialization\ISerializer.cs" />
     <Compile Include="Serialization\MockEncoder.cs" />
     <Compile Include="ServiceModel\IUnitOfWork.cs" />
