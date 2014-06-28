@@ -46,6 +46,10 @@
     <Compile Include="Helpers\EventArgExtension.cs" />
     <Compile Include="Helpers\TypeExtension.cs" />
     <Compile Include="Logic\BusinessLogic.cs" />
+    <Compile Include="Messaging\Acknowledge.cs" />
+    <Compile Include="Messaging\DataEntity.cs" />
+    <Compile Include="Messaging\FaultMessage.cs" />
+    <Compile Include="Messaging\IDataEntity.cs" />
     <Compile Include="Model\Model.cs" />
     <Compile Include="Notification\IBroadcasterProvider.cs" />
     <Compile Include="Notification\INotificationDispatcher.cs" />
