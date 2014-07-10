@@ -50,7 +50,10 @@
     <Compile Include="Messaging\DataEntity.cs" />
     <Compile Include="Messaging\FaultMessage.cs" />
     <Compile Include="Messaging\IDataEntity.cs" />
+    <Compile Include="Model\BusinessException.cs" />
+    <Compile Include="Model\EntityException.cs" />
     <Compile Include="Model\Model.cs" />
+    <Compile Include="Model\ValidationException.cs" />
     <Compile Include="Notification\IBroadcasterProvider.cs" />
     <Compile Include="Notification\INotificationDispatcher.cs" />
     <Compile Include="Persistence\AbstractCache.cs" />
@@ -97,10 +100,12 @@
     <Compile Include="Serialization\MockEncoder.cs" />
     <Compile Include="ServiceModel\IUnitOfWork.cs" />
     <Compile Include="Storage\IArchiver.cs" />
+    <Compile Include="Storage\IMediaEncoder.cs" />
     <Compile Include="Storage\IStorage.cs" />
     <Compile Include="Storage\ITemporaryDirectory.cs" />
     <Compile Include="Storage\ITemporaryFile.cs" />
     <Compile Include="Storage\ITemporaryStorage.cs" />
+    <Compile Include="Storage\MediaEncoderJob.cs" />
     <Compile Include="Storage\Metadata.cs" />
     <Compile Include="Storage\StorageSettings.cs" />
     <Compile Include="Helpers\UrlHelper.cs" />

@@ -8,7 +8,7 @@ namespace Touch.Serialization
     /// <summary>
     /// Data encrypter.
     /// </summary>
-    public interface IEncryper
+    public interface IEncrypter
     {
         /// <summary>
         /// Encrypt data.
