@@ -37,7 +37,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Data\MultipartParser.cs" />
     <Compile Include="Domain\DocumentUtil.cs" />
     <Compile Include="Domain\EntityUtil.cs" />
     <Compile Include="Domain\EnumUtil.cs" />
@@ -98,7 +97,6 @@
     <Compile Include="Serialization\IHashGenerator.cs" />
     <Compile Include="Serialization\ISerializer.cs" />
     <Compile Include="Serialization\MockEncoder.cs" />
-    <Compile Include="ServiceModel\IUnitOfWork.cs" />
     <Compile Include="Storage\IArchiver.cs" />
     <Compile Include="Storage\IMediaEncoder.cs" />
     <Compile Include="Storage\IStorage.cs" />
