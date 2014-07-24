@@ -68,6 +68,7 @@
     <Compile Include="Persistence\IDocument.cs" />
     <Compile Include="Persistence\IBusinessEntity.cs" />
     <Compile Include="Persistence\ITransaction.cs" />
+    <Compile Include="Providers\IDependenciesProvider.cs" />
     <Compile Include="Queue\IQueueProvider.cs" />
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\ILoggerProvider.cs" />
