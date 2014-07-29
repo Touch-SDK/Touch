@@ -36,6 +36,13 @@ namespace Touch.Storage
         void PutFile(Stream file, string token, Metadata metadata);
 
         /// <summary>
+        /// Put metadata into the storage.
+        /// </summary>
+        /// <param name="token">Unique file identifier.</param>
+        /// <param name="metadata">File metadata.</param>
+        void PutMetadata(string token, Metadata metadata);
+
+        /// <summary>
         /// Get file from the storage.
         /// </summary>
         /// <param name="token">Unique file identifier.</param>
