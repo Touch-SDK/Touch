@@ -15,7 +15,11 @@ namespace Touch.Storage
 
         public virtual DateTime Started { get; protected set; }
 
+        public virtual DateTime Ended { get; protected set; }
+
         public virtual MediaEncoderJobStatus Status { get; protected set; }
+
+        public abstract MediaEncoderJobStatus Wait();
     }
 
     public enum MediaEncoderJobStatus
