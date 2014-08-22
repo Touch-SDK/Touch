@@ -1,18 +1,16 @@
-﻿using Touch.Domain;
-
-namespace Touch.Notification
+﻿namespace Touch.Notification
 {
     /// <summary>
-    /// Push notification dispatcher.
+    /// Targeted notification dispatcher.
     /// </summary>
-    public interface INotificationDispatcher
+    public interface INotificationDispatcher<in T>
+        where T : class, new()
     {
         /// <summary>
-        /// Dispatch a notification.
+        /// Dispatch a notification to a recipient.
         /// </summary>
-        /// <param name="deviceToken">Device token.</param>
-        /// <param name="message">Notification alert message.</param>
-        /// <param name="count">Badge count.</param>
-        void Dispatch(string deviceToken, string message, int count = 0, string data = null);
+        /// <param name="recipient">Notification recipient.</param>
+        /// <param name="message">Notification message.</param>
+        void Dispatch(string recipient, T message);
     }
 }

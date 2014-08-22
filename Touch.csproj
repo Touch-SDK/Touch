@@ -55,7 +55,6 @@
     <Compile Include="Model\EntityException.cs" />
     <Compile Include="Model\Model.cs" />
     <Compile Include="Model\ValidationException.cs" />
-    <Compile Include="Notification\IBroadcasterProvider.cs" />
     <Compile Include="Notification\INotificationDispatcher.cs" />
     <Compile Include="Persistence\AbstractCache.cs" />
     <Compile Include="Persistence\AbstractCacheProvider.cs" />
@@ -76,8 +75,6 @@
     <Compile Include="Logging\ILoggerProvider.cs" />
     <Compile Include="Logging\MockLogger.cs" />
     <Compile Include="Logging\MockLoggerProvider.cs" />
-    <Compile Include="Notification\AbstractNotification.cs" />
-    <Compile Include="Notification\INotification.cs" />
     <Compile Include="Notification\INotificationBroadcaster.cs" />
     <Compile Include="Persistence\AbstractRepository.cs" />
     <Compile Include="Persistence\Entity.cs" />

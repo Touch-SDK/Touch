@@ -5,7 +5,7 @@
     /// </summary>
     /// <typeparam name="T">Notification type.</typeparam>
     public interface INotificationBroadcaster<in T>
-        where T : class, INotification, new()
+        where T : class, new()
     {
         /// <summary>
         /// Broadcast a notification.
