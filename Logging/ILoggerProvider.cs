@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System;
 
 namespace Touch.Logging
 {
@@ -14,5 +14,11 @@ namespace Touch.Logging
         /// <returns><c>ILogger</c> instance.</returns>
         ILogger Get<T>()
             where T : class;
+
+        /// <summary>
+        /// Get an <c>ILogger</c> instance for a given type.
+        /// </summary>
+        /// <returns><c>ILogger</c> instance.</returns>
+        ILogger Get(Type type);
     }
 }
