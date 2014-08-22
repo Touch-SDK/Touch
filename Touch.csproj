@@ -41,6 +41,8 @@
     <Compile Include="Domain\EntityUtil.cs" />
     <Compile Include="Domain\EnumUtil.cs" />
     <Compile Include="Domain\StoreExtensions.cs" />
+    <Compile Include="Email\EmailMessage.cs" />
+    <Compile Include="Email\IEmailSender.cs" />
     <Compile Include="Helpers\DataContractHelper.cs" />
     <Compile Include="Helpers\EventArgExtension.cs" />
     <Compile Include="Helpers\TypeExtension.cs" />
