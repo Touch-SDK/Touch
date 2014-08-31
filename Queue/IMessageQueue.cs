@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Touch.Queue
 {
@@ -8,7 +7,7 @@ namespace Touch.Queue
     /// </summary>
     /// <typeparam name="T">Message body type.</typeparam>
     public interface IMessageQueue<T>
-        where T : class, IMessage, new()
+        where T : class, new()
     {
         /// <summary>
         /// Add message to the queue.
@@ -20,9 +19,8 @@ namespace Touch.Queue
         /// Get messages from the queue.
         /// </summary>
         /// <param name="take">Maximum number of messages to take.</param>
-        /// <param name="visibilityTimeout">Message visibility timeout.</param>
         /// <returns></returns>
-        IEnumerable<IQueueItem<T>> Dequeue(uint take, TimeSpan visibilityTimeout);
+        IEnumerable<IQueueItem<T>> Dequeue(uint take);
 
         /// <summary>
         /// Remove message from the queue.

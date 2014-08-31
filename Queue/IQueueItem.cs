@@ -6,7 +6,7 @@ namespace Touch.Queue
     /// An IMessageQueue message.
     /// </summary>
     public interface IQueueItem<T> : IEquatable<IQueueItem<T>>
-        where T : class, IMessage, new()
+        where T : class, new()
     {
         /// <summary>
         /// Message ID.
@@ -22,10 +22,5 @@ namespace Touch.Queue
         /// Message body.
         /// </summary>
         T Body { get; }
-
-        /// <summary>
-        /// Expiration date.
-        /// </summary>
-        DateTime ExpirationTime { get; }
     }
 }

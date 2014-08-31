@@ -7,7 +7,7 @@ namespace Touch.Queue
     /// </summary>
     /// <typeparam name="T">Notification type.</typeparam>
     public interface IQueueWatcher<T> : IDisposable
-        where T : class, IMessage, new()
+        where T : class, new()
     {
         /// <summary>
         /// Start watching the queue for new notifications.
@@ -33,5 +33,5 @@ namespace Touch.Queue
     /// <typeparam name="T">Notification type.</typeparam>
     /// <param name="message">Notification instance.</param>
     public delegate void HandleNewQueueItem<in T>(T message)
-        where T : class, IMessage;
+        where T : class, new();
 }
