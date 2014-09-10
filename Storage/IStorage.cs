@@ -43,6 +43,13 @@ namespace Touch.Storage
         void PutMetadata(string token, Metadata metadata);
 
         /// <summary>
+        /// Get file metadata.
+        /// </summary>
+        /// <param name="token">Unique file identifier.</param>
+        /// <returns>File metadata.</returns>
+        Metadata GetMetadata(string token);
+
+        /// <summary>
         /// Get file from the storage.
         /// </summary>
         /// <param name="token">Unique file identifier.</param>
