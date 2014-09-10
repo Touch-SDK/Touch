@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Touch.Storage
 {
@@ -16,6 +17,16 @@ namespace Touch.Storage
         /// Content type of the file.
         /// </summary>
         public string ContentType { get; set; }
+
+        /// <summary>
+        /// Last modification date of the file.
+        /// </summary>
+        public DateTime LastModified { get; set; }
+
+        /// <summary>
+        /// ETag of the file.
+        /// </summary>
+        public string ETag { get; set; }
 
         public Metadata()
         {
