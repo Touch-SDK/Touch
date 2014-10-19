@@ -18,7 +18,8 @@ namespace Touch.Domain
         /// </summary>
         public static DateTime FromDocumentString(this string value)
         {
-            return DateTime.ParseExact(value, DateTimeFormatInfo.InvariantInfo.SortableDateTimePattern, CultureInfo.InvariantCulture);
+            var date = DateTime.ParseExact(value, DateTimeFormatInfo.InvariantInfo.SortableDateTimePattern, CultureInfo.InvariantCulture);
+            return new DateTime(date.Ticks, DateTimeKind.Utc);
         }
     }
 }
