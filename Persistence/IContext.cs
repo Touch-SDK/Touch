@@ -1,4 +1,6 @@
-﻿namespace Touch.Persistence
+﻿using System.Collections.Generic;
+
+namespace Touch.Persistence
 {
     /// <summary>
     /// Document store context.
@@ -29,5 +31,11 @@
         /// </summary>
         /// <param name="target">Document to store.</param>
         void Store(IDocument target);
+
+        /// <summary>
+        /// Query the document store.
+        /// </summary>
+        /// /// <param name="condition">Field name and value condition to use in the query.</param>
+        IEnumerable<T> Query<T>(KeyValuePair<string, string> condition) where T : class, IDocument;
     }
 }

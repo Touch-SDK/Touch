@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Touch.Persistence
 {
@@ -30,6 +31,7 @@ namespace Touch.Persistence
         public abstract void Delete(T target);
         public abstract void Delete(string hashKey);
         public abstract void Store(T target);
+        public abstract IEnumerable<T> Query(KeyValuePair<string, string> condition);
         #endregion
     }
 }

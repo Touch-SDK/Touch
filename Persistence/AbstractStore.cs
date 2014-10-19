@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Touch.Persistence
 {
@@ -32,7 +33,7 @@ namespace Touch.Persistence
         /// <returns>Function result.</returns>
         /// <exception cref="Exceptions.ObjectNotFoundException" />
         /// <exception cref="Exceptions.ObjectNotUniqueException" />
-        protected abstract T TryCatch(Func<T> func);
+        protected abstract TR TryCatch<TR>(Func<TR> func);
         #endregion
 
         #region IStore<T> Members
@@ -43,7 +44,7 @@ namespace Touch.Persistence
 
         public void Delete(T target)
         {
-            TryCatch(() =>
+            TryCatch<object>(() =>
             {
                 GetContext().Delete(target);
                 return null;
@@ -52,7 +53,7 @@ namespace Touch.Persistence
 
         public void Delete(string hashKey)
         {
-            TryCatch(() =>
+            TryCatch<object>(() =>
             {
                 GetContext().Delete<T>(hashKey);
                 return null;
@@ -61,11 +62,16 @@ namespace Touch.Persistence
 
         public void Store(T target)
         {
-            TryCatch(() =>
+            TryCatch<object>(() =>
             {
                 GetContext().Store(target);
                 return null;
             });
+        }
+
+        public IEnumerable<T> Query(KeyValuePair<string,string> condition)
+        {
+            return TryCatch(() => GetContext().Query<T>(condition));
         }
         #endregion
 

@@ -1,4 +1,7 @@
-﻿namespace Touch.Persistence
+﻿using System;
+using System.Collections.Generic;
+
+namespace Touch.Persistence
 {
     /// <summary>
     /// A store of documents of type T.
@@ -31,5 +34,13 @@
         /// </summary>
         /// <param name="target">Document to store.</param>
         void Store(T target);
+
+        /// <summary>
+        /// Query the document store.
+        /// </summary>
+        /// <param name="condition">Field name and value condition to use in the query.</param>
+        /// <returns>Matching documents.</returns>
+        /// <exception cref="NotSupportedException">Store does not support querying.</exception>
+        IEnumerable<T> Query(KeyValuePair<string,string> condition);
     }
 }
