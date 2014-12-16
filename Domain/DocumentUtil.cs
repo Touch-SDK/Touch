@@ -10,7 +10,10 @@ namespace Touch.Domain
         /// </summary>
         public static string ToDocumentString(this DateTime value)
         {
-            return value.ToUniversalTime().ToString(DateTimeFormatInfo.InvariantInfo.SortableDateTimePattern);
+            if (value.Kind == DateTimeKind.Local)
+                value = value.ToUniversalTime();
+
+            return value.ToString(DateTimeFormatInfo.InvariantInfo.SortableDateTimePattern);
         }
 
         /// <summary>
