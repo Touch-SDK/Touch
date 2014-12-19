@@ -9,7 +9,7 @@ namespace Touch.Domain
         /// </summary>
         public static string ToTokenString(this Guid value)
         {
-            return value.ToString("N").ToUpperInvariant();
+            return value.ToString("N").ToLowerInvariant();
         }
     }
 }
