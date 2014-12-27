@@ -1,16 +1,19 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace Touch.Persistence
 {
     /// <summary>
     /// Document.
     /// </summary>
+    [DataContract]
     abstract public class Document : IDocument
     {
         #region IDocument implementation
         /// <summary>
         /// Documents's hash key.
         /// </summary>
+        [DataMember(Name = "key")]
         public abstract string HashKey { get; set; }
         #endregion
 

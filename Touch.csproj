@@ -56,8 +56,6 @@
     <Compile Include="Model\Model.cs" />
     <Compile Include="Model\ValidationException.cs" />
     <Compile Include="Notification\INotificationDispatcher.cs" />
-    <Compile Include="Persistence\AbstractCache.cs" />
-    <Compile Include="Persistence\AbstractCacheProvider.cs" />
     <Compile Include="Persistence\BusinessEntity.cs" />
     <Compile Include="Persistence\AbstractStore.cs" />
     <Compile Include="Persistence\IBlob.cs" />
